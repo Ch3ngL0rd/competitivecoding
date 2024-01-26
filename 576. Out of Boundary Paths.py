@@ -87,6 +87,8 @@ class Solution:
             for x in range(n):
                 space[0][y][x] = [x == 0,y == 0,x == n - 1,y == m - 1].count(True)
 
+        # Make his faster by only computing necessary
+        # negative from maxMove pyramid...
         for move in range(1,maxMove):
             for y in range(m):
                 for x in range(n):
